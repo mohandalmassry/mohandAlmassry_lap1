@@ -7,12 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello Word <?php echo $name; ?></h1>
-    <form method="post" action="lab1">
-    @csrf
+    <ul>
 
-        <input name=" name" type="text" placeholder="enter name" > </input>
-        <input name="submit" type="submit"></input>
-    </form>
+    @foreach($tasks as $task)
+    <li>
+        {{$task}}
+    </li>
+
+    @endforeach
+    
+    </ul>
 </body>
 </html>

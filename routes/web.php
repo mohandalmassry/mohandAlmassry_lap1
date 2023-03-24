@@ -21,3 +21,17 @@ Route::get('lab1', function () {
     return view('lab1',compact('name'));
 });
 
+Route::post('lab1', function () {
+    $name="Mohand";
+    if(isset($_POST['submit']))
+    $name=$_POST['name'];
+
+    return view('lab1',compact('name'));
+});
+
+Route::get('tasks',function(){
+    $tasks=['task1','task2','task3'];
+    return view('tasks',compact('tasks'));
+
+});
+
