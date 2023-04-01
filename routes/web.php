@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/page1', function () {
     return view('welcome');
 });
 Route::get('lab1', function () {
@@ -34,4 +34,22 @@ Route::get('tasks',function(){
     return view('tasks',compact('tasks'));
 
 });
+
+
+// front index
+Route::get('/',function(){
+
+    return view('front.index');
+});
+
+Route::get('/about',function(){
+
+    return view('front.about');
+});
+
+Route::get('/service',function(){
+
+    return view('front.service');
+});
+
 
